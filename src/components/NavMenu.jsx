@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { MdClose, MdMenu } from 'react-icons/md';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { MdClose, MdMenu } from "react-icons/md";
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -21,15 +21,15 @@ const NavStyles = styled.nav`
       border-radius: 8px;
       transition: 0.3s ease background-color;
       &:hover {
-        background-color: #F5F5F5	;
+        background-color: #f5f5f5;
       }
     }
     a {
       display: inline-block;
-      font-family: 'RobotoMono Regular';
+      font-family: "RobotoMono Regular";
       padding: 1rem 2rem;
       font-size: 2rem;
-      color:black;
+      color: black;
       outline: none;
     }
     .active {
@@ -58,12 +58,12 @@ const NavStyles = styled.nav`
       transform: translateY(calc(-100% - var(--top)));
     }
     .mobile-menu-icon {
-     display: block;
+      display: block;
     }
     .navItems {
       --top: 1rem;
       transition: 0.3s ease transform;
-     // background-color: var(--deep-dark);
+      // background-color: var(--deep-dark);
       background-color: white;
       padding: 2rem;
       width: 90%;
@@ -82,7 +82,7 @@ const NavStyles = styled.nav`
         }
       }
       li {
-        font-family: 'Lobster';
+        font-family: "Lobster";
         display: block;
         margin-bottom: 1rem;
       }
@@ -91,14 +91,14 @@ const NavStyles = styled.nav`
 `;
 
 const HorizontalLine = ({ color }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: 5,
-            marginTop:25,
-        }}
-    />
+  <hr
+    style={{
+      color: color,
+      backgroundColor: color,
+      height: 5,
+      marginTop: 25,
+    }}
+  />
 );
 
 export default function NavMenu() {
@@ -114,89 +114,107 @@ export default function NavMenu() {
       >
         <MdMenu />
       </div>
-      <div style={{display:'flex',flexDirection:'row'}}>
-      <p style={{fontFamily:'Lobster', fontSize:20, color:'black', textAlign:'left',marginRight:'5em',marginLeft:'0.69em',width:'490px'}}>Universitatea "Aurel Vlaicu" din Arad</p>
-      <ul className={!showNav ? 'navItems hide-item' : 'navItems'} >
-        <div
-          className="closeNavIcon"
-          onClick={() => setShowNav(!showNav)}
-          role="button"
-          onKeyDown={() => setShowNav(!showNav)}
-          tabIndex={0}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          marginTop: "1.5rem",
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "Lobster",
+            fontSize: 20,
+            color: "black",
+            textAlign: "left",
+            marginRight: "5em",
+            marginLeft: "0.69em",
+            width: "490px",
+          }}
         >
-          <MdClose />
-        </div>
-       
-        <li>
-          <NavLink
-            to="/"
-            exact
+          Universitatea "Aurel Vlaicu" din Arad
+        </p>
+        <ul className={!showNav ? "navItems hide-item" : "navItems"}>
+          <div
+            className="closeNavIcon"
             onClick={() => setShowNav(!showNav)}
             role="button"
             onKeyDown={() => setShowNav(!showNav)}
             tabIndex={0}
           >
-           Pagina de start
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/comitet"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-           Comitet
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/sponsori"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-           Sponsori și parteneri
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/diplome"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-           Diplome și Galerie
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/invitedSpeakers"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-           Inivați speciali
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/sectiuni"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-           Secțiuni
-          </NavLink>
-        </li>
-      </ul>
+            <MdClose />
+          </div>
+
+          <li>
+            <NavLink
+              to="/"
+              exact
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Pagina de start
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/comitet"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Comitet
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/sponsori"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Sponsori și parteneri
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/diplome"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Diplome și Galerie
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/invitedSpeakers"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Inivați speciali
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/sectiuni"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Secțiuni
+            </NavLink>
+          </li>
+        </ul>
       </div>
-      <HorizontalLine/>
+      <HorizontalLine />
     </NavStyles>
   );
 }
