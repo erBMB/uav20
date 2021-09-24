@@ -90,7 +90,7 @@ export function Diplome() {
     <DiplomeStyle>
       <h1 className="eh1">Diplome</h1>
       <h3 className="eh3">
-        Vizualitați premile primite de studenții care au participat la Sesiunea
+        Vizualitați premiile primite de studenții care au participat la Sesiunea
         Intenațională de Comunicări Științifice Stundețești - Arad 2021
       </h3>
       <div className="center-image">
