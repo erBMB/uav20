@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MyGallery from "../components/MyGallery";
+// import MyGallery from "../components/MyGallery";
 import Electro from "../resources/sectiuneaElectro.pdf";
 
 const DiplomeStyle = styled.div`
