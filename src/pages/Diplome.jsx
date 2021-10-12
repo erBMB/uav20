@@ -127,7 +127,7 @@ export function Diplome() {
          Diplome - Elevi
         </a> */}
       </div>
-      <MyGallery />
+      {/* <MyGallery /> */}
     </DiplomeStyle>
   );
 }
